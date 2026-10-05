@@ -88,3 +88,67 @@ button:hover {
     font-size: 32px;
     font-weight: 700;
 }
+
+.large-result {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.blue-button {
+    background-color: #2563eb;
+}
+
+.blue-button:hover {
+    background-color: #1d4ed8;
+}
+
+.teal-button {
+    background-color: #0f766e;
+}
+
+.teal-button:hover {
+    background-color: #115e59;
+}
+
+.blue-result {
+    background-color: #eff6ff;
+}
+
+.teal-result {
+    background-color: #f0fdfa;
+}
+
+.copy-button {
+    width: auto;
+    display: block;
+    margin: 12px auto 0;
+    padding: 8px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    background-color: white;
+    border: 1px solid currentColor;
+}
+
+.copy-button:hover {
+    background-color: #f9fafb;
+}
+
+.blue-result .copy-button {
+    background-color: #2563eb;
+    color: white;
+    border-color: #2563eb;
+}
+
+.blue-result .copy-button:hover {
+    background-color: #1d4ed8;
+}
+
+.teal-result .copy-button {
+    background-color: #0f766e;
+    color: white;
+    border-color: #0f766e;
+}
+
+.teal-result .copy-button:hover {
+    background-color: #115e59;
+}

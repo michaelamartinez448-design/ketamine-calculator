@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <title>Ketamine Dose Calculator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <title>Ketamine Infusion Calculator</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -9,7 +9,7 @@
 
 <div class="container">
 
-    <h1>Ketamine Dose Calculator</h1>
+    <h1>Ketamine Infusion Calculator</h1>
 
     <p class="description">
         Convert between ketamine infusion rates.
@@ -22,46 +22,47 @@
 
     <hr>
 
+    <h2>mcg/kg/min &rarr; mg/hr</h2>
+
+    <div class="input-group">
+        <label for="dose">Ketamine infusion rate (mcg/kg/min):</label>
+        <input type="number" id="dose" min="0" step="0.001">
+    </div>
+
+    <button class="blue-button" onclick="calculateRate()">Calculate</button>
+
+    <div class="result blue-result">
+        <div class="result-label">
+            Ketamine infusion rate
+        </div>
+
+        <div id="rateResult" class="large-result">
+            -
+        </div>
+
+        <button class="copy-button" onclick="copyResult('rateResult', this)">Copy</button>
+    </div>
+    <hr>
     <h2>mg/hr &rarr; mcg/kg/min</h2>
 
     <div class="input-group">
-        <label for="rate">Ketamine infusion (mg/hr):</label>
+        <label for="rate">Ketamine infusion rate (mg/hr):</label>
         <input type="number" id="rate" min="0" step="0.01">
     </div>
 
-    <button onclick="calculateDose()">Calculate</button>
+    <button class="teal-button" onclick="calculateDose()">Calculate</button>
 
-    <div class="result">
+    <div class="result teal-result">
         <div class="result-label">
-            Ketamine dose
+            Ketamine infusion rate
         </div>
 
         <div id="result">
             -
         </div>
+
+        <button class="copy-button" onclick="copyResult('result', this)">Copy</button>
     </div>
-
-    <hr>
-
-    <h2>mcg/kg/min &rarr; mg/hr</h2>
-
-    <div class="input-group">
-        <label for="dose">Ketamine dose (mcg/kg/min):</label>
-        <input type="number" id="dose" min="0" step="0.001">
-    </div>
-
-    <button onclick="calculateRate()">Calculate</button>
-
-    <div class="result">
-        <div class="result-label">
-            Ketamine infusion
-        </div>
-
-        <div id="rateResult">
-            -
-        </div>
-    </div>
-
 </div>
 
 <script src="script.js"></script>

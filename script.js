@@ -30,3 +30,19 @@ function calculateRate() {
 
     rateResult.textContent = rate.toFixed(2) + " mg/hr";
 }
+
+function copyResult(resultId, button) {
+    const result = document.getElementById(resultId);
+
+    if (!result || result.textContent.trim() === "-") {
+        return;
+    }
+
+    navigator.clipboard.writeText(result.textContent.trim());
+
+    button.textContent = "Copied!";
+
+    setTimeout(() => {
+        button.textContent = "Copy";
+    }, 1500);
+}
